@@ -15,12 +15,12 @@ namespace QuickInfo.Processors.Converters
             if (string.IsNullOrEmpty(base64String) || base64String.Length % 4 != 0
                || base64String.Contains(" ") || base64String.Contains("\t") || base64String.Contains("\r") || base64String.Contains("\n"))
             {
-                return false;
+                return null;
             }
 
             if (!Regex.IsMatch(base64String, @"^[a-zA-Z0-9\+/]*={0,3}$", RegexOptions.None))
             {
-                return false;
+                return null;
             }    
 
             try
