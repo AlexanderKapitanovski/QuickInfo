@@ -36,7 +36,6 @@ namespace QuickInfo.Processors.Converters
                 var pairs = new List<(string, string)>
                 {
                 ("UTF8:",  Encoding.UTF8.GetString(data)),
-                ("Unicode:",  Encoding.Unicode.GetString(data)),
                 ("ASCI:", Encoding.ASCII.GetString(data)),
                 ("Byte[]:", BitConverter.ToString(data))
                 };
